@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackFest | Campus Event Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <main class="login-main">
+    <div class="login-content">
+      <div class="login-brand">
+        <span class="login-brand-mark">{ }</span>
+        <div>
+          <h1 class="login-brand-title">HackFest</h1>
+          <p class="login-brand-sub">Campus hackathons &amp; tech events, one platform</p>
+        </div>
+      </div>
+
+      <div class="login-card">
+        <div class="login-tabs" id="tabs">
+          <button type="button" class="login-tab active" data-role="student">Student</button>
+          <button type="button" class="login-tab" data-role="organizer">Organizer</button>
+          <button type="button" class="login-tab" data-role="admin">Admin</button>
+        </div>
+
+        <div class="login-form-area">
+          <p class="login-eyebrow" id="eyebrow">// student login</p>
+
+          <div id="error-box" class="login-error hidden"></div>
+          <div id="info-box" class="login-info hidden"></div>
+
+          <form id="login-form" class="login-form">
+            <label class="login-field hidden" id="name-field">
+              <span>Name</span>
+              <input type="text" id="name-input" placeholder="Your full name" />
+            </label>
+            <label class="login-field">
+              <span>Email</span>
+              <input type="email" id="email-input" required placeholder="you@college.edu" />
+            </label>
+            <label class="login-field">
+              <span>Password</span>
+              <input type="password" id="password-input" required placeholder="••••••••" />
+            </label>
+            <button type="submit" class="login-submit" id="submit-btn">Log in</button>
+          </form>
+
+          <p class="login-switch-mode" id="switch-mode">
+            New here? <button type="button" id="switch-btn">Create an account</button>
+          </p>
+          <p class="login-admin-note hidden" id="admin-note">Admin accounts are created by an existing admin only.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

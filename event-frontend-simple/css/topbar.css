@@ -1,0 +1,50 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--cyan);
+}
+
+.topbar-brand { display: flex; align-items: center; gap: 10px; }
+
+.topbar-mark {
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  background: #ffffff;
+  border-radius: 8px;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+}
+
+.topbar-name { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: #ffffff; }
+
+.topbar-role-tag {
+  font-size: 0.7rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+
+.topbar-user { font-size: 0.88rem; color: rgba(255, 255, 255, 0.85); }
+
+.topbar-logout {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.82rem;
+}
+
+.topbar-logout:hover { background: rgba(255, 255, 255, 0.12); }

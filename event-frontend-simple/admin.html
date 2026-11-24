@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackFest | Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/topbar.css" />
+  <link rel="stylesheet" href="css/student.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div id="topbar-root"></div>
+
+  <main class="admin-main">
+    <p class="page-eyebrow" style="color: var(--amber)">// admin console</p>
+    <h1 class="page-heading" style="margin-bottom: 32px;">Platform overview</h1>
+
+    <div id="error-box" class="page-error hidden"></div>
+    <div id="success-box" class="page-success hidden"></div>
+    <p id="status" class="page-status">Loading…</p>
+
+    <div id="content" class="hidden">
+      <div class="stats-grid" id="stats-grid"></div>
+
+      <section class="admin-section">
+        <h2 class="section-title" id="pending-title">Pending organizer approvals</h2>
+        <div class="table-wrap" id="pending-list"></div>
+      </section>
+
+      <section class="admin-section">
+        <h2 class="section-title" id="approved-title">Approved organizers</h2>
+        <div class="table-wrap" id="approved-list"></div>
+      </section>
+
+      <section class="admin-section">
+        <h2 class="section-title" id="events-title">All events</h2>
+        <div class="admin-event-grid" id="events-grid"></div>
+      </section>
+
+      <section class="admin-section">
+        <h2 class="section-title" id="students-title">Students</h2>
+        <div class="table-wrap" id="students-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/topbar.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

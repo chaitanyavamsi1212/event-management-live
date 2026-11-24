@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackFest | Organizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/topbar.css" />
+  <link rel="stylesheet" href="css/student.css" />
+  <link rel="stylesheet" href="css/organizer.css" />
+</head>
+<body>
+  <div id="topbar-root"></div>
+
+  <main class="organizer-main">
+    <div class="page-header-row">
+      <div>
+        <p class="page-eyebrow" style="color: var(--violet)">// organizer console</p>
+        <h1 class="page-heading">Your events</h1>
+      </div>
+      <button class="primary-btn" id="toggle-form-btn">+ New event</button>
+    </div>
+
+    <div id="error-box" class="page-error hidden"></div>
+    <div id="success-box" class="page-success hidden"></div>
+
+    <form id="create-form" class="create-form hidden">
+      <div class="form-grid">
+        <label class="form-field">
+          <span>Title</span>
+          <input type="text" id="f-title" required placeholder="CodeStorm 2026" />
+        </label>
+        <label class="form-field">
+          <span>Venue</span>
+          <input type="text" id="f-venue" required placeholder="Main Auditorium" />
+        </label>
+        <label class="form-field">
+          <span>Event starts</span>
+          <input type="datetime-local" id="f-event-time" required />
+        </label>
+        <label class="form-field">
+          <span>Registration deadline</span>
+          <input type="datetime-local" id="f-deadline" required />
+        </label>
+        <label class="form-field">
+          <span>Entry fee (₹, optional)</span>
+          <input type="number" id="f-amount" min="0" placeholder="0" />
+        </label>
+        <label class="form-field">
+          <span>Event image</span>
+          <input type="file" id="f-image" accept="image/*" />
+        </label>
+      </div>
+      <label class="form-field">
+        <span>Description</span>
+        <textarea id="f-description" rows="3" placeholder="What's this event about?"></textarea>
+      </label>
+      <button type="submit" class="primary-btn" id="submit-btn">Create event</button>
+    </form>
+
+    <p id="status" class="page-status hidden">Loading your events…</p>
+    <div id="empty-box" class="page-empty hidden">
+      <p>You haven't created any events yet.</p>
+      <p class="page-empty-sub">Click "+ New event" to post your first one.</p>
+    </div>
+    <div id="event-list" class="event-list"></div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/topbar.js"></script>
+  <script src="js/organizer.js"></script>
+</body>
+</html>

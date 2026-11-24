@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackFest | Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/topbar.css" />
+  <link rel="stylesheet" href="css/event-card.css" />
+  <link rel="stylesheet" href="css/student.css" />
+</head>
+<body>
+  <div id="topbar-root"></div>
+
+  <main class="page-main">
+    <div class="page-header-row">
+      <div>
+        <p class="page-eyebrow">// upcoming</p>
+        <h1 class="page-heading">Campus events</h1>
+      </div>
+      <div class="page-stat-pill" id="reg-count">0 registered</div>
+    </div>
+
+    <div id="error-box" class="page-error hidden"></div>
+    <p id="status" class="page-status">Loading events…</p>
+    <div id="empty-box" class="page-empty hidden">
+      <p>No events posted yet.</p>
+      <p class="page-empty-sub">Check back soon — organizers will list hackathons and tech events here.</p>
+    </div>
+    <div id="event-grid" class="event-grid"></div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/topbar.js"></script>
+  <script src="js/event-card.js"></script>
+  <script src="js/student.js"></script>
+</body>
+</html>
