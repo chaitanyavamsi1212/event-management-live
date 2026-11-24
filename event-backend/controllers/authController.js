@@ -3,11 +3,10 @@ const jwt = require('jsonwebtoken');
 const pool = require('../db/pool');
 
 function generateToken(user) {
-  return jwt.sign(
-    { id: user.id, role: user.role, email: user.email, name: user.name },
-    process.env.JWT_SECRET,
-    { expiresIn: process.env.JWT_EXPIRES_IN || '7od' }
-  );
+  const expiresIn = process.env.JWT_EXPIRES_IN || '7d';
+  return jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, {
+  expiresIn,
+});
 }
 
 // POST /api/auth/register
