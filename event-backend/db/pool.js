@@ -1,7 +1,5 @@
 const { Pool } = require('pg');
 
-const { Pool } = require('pg');
-
 const pool = process.env.DATABASE_URL
   ? new Pool({
       connectionString: process.env.DATABASE_URL,
@@ -14,6 +12,8 @@ const pool = process.env.DATABASE_URL
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
     });
+
+module.exports = pool;
 
 module.exports = pool;
 
